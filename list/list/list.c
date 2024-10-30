@@ -1,5 +1,7 @@
 #include "list.h"
 #include <stdlib.h>
+#include <stdbool.h>
+#include <assert.h>
 
 typedef struct ListElement {
 	Value value;
@@ -26,4 +28,17 @@ void add(List* list, Position position, Value value) {
 	element->value = value;
 	element->next = position->next;
 	position->next = element;
+}
+
+Value getValue(List* list, Position position) {
+	assert(position->next == NULL);
+	return position->next->value;
+}
+
+bool isLast(List* list, Position position) {
+	return position->next == NULL;
+}
+
+bool isValid(List* list, Position position) {
+	return position != NULL;
 }

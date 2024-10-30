@@ -1,4 +1,5 @@
 #pragma once
+#include <stdbool.h>
 
 typedef struct List List;
 
@@ -21,4 +22,8 @@ void delete(List* list, Position position);
 Position first(List* list);
 
 Position next(Position position);
+
+bool isLast(List* list, Position position);
+
+bool isValid(List* list, Position position);
 
