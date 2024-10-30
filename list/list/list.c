@@ -11,6 +11,16 @@ typedef struct List {
 };
 
 List* createList() {
-	return (List*)calloc(1, sizeof(List));
+	List* list = malloc(sizeof(List));
+	ListElement* head = calloc(1, sizeof(ListElement));
+	list->head = head;
+	return list;
 }
 
+Position first(List* list) {
+	return list->head;
+}
+
+void add(List* list, Position position, Value value) {
+	
+}

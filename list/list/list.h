@@ -14,4 +14,11 @@ void add(List* list, Position position, Value value);
 
 Value getValue(List* list, Position position);
 
+void setValue(List* list, Position position);
+
 void pop(List* list, Position position);
+
+Position first(List* list);
+
+Position next(Position position);
+
