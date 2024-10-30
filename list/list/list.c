@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 typedef struct ListElement {
-	int value;
+	Value value;
 	ListElement* next;
 } ListElement;
 
@@ -22,5 +22,8 @@ Position first(List* list) {
 }
 
 void add(List* list, Position position, Value value) {
-	
+	ListElement* element = malloc(sizeof(ListElement));
+	element->value = value;
+	element->next = position->next;
+	position->next = element;
 }

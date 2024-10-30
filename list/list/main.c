@@ -4,5 +4,6 @@
 
 void main() {
 	List* list = createList();
-	
+	Position position = first(list);
+
 }

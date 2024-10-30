@@ -16,7 +16,7 @@ Value getValue(List* list, Position position);
 
 void setValue(List* list, Position position);
 
-void pop(List* list, Position position);
+void delete(List* list, Position position);
 
 Position first(List* list);
 
